@@ -1,4 +1,4 @@
-package util;
+package es.javawarweb.web.utils;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

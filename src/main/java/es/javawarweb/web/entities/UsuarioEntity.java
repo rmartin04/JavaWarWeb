@@ -1,4 +1,4 @@
-package entities;
+package es.javawarweb.web.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;

@@ -4,9 +4,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
 @Entity
-@Table
+@Table(name = "TB_USUARIOS")
 public class UsuarioEntity {
 
-	  pp
+	
 	
 }

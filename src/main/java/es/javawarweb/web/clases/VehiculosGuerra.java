@@ -25,6 +25,10 @@ public abstract class VehiculosGuerra implements Tripulable {
     private int ataqueBase;
     private int defensaBase;
     private List<Guerrero> guerreros;
+    // Constructor sin parámetros
+    public VehiculosGuerra() {
+    	
+    }
 
     // Constructores
     public VehiculosGuerra(String nombreVehiculo, String tipoVehiculo, int ataqueBase, int defensaBase,

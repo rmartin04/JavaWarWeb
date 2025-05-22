@@ -1,5 +1,7 @@
 package es.javawarweb.web.dao;
 
+import java.util.List;
+
 import es.javawarweb.web.entities.NaveDestructora;
 
 public interface NaveDestructoraDAO {
@@ -11,6 +13,6 @@ public interface NaveDestructoraDAO {
 
 	void actualizar(NaveDestructora naveDestructora);
 
-	void consultar(Long id);
+	List<NaveDestructora> consultar(Long id);
 
 }

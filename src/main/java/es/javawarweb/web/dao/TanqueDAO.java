@@ -1,5 +1,7 @@
 package es.javawarweb.web.dao;
 
+import java.util.List;
+
 import es.javawarweb.web.entities.Tanque;
 
 public interface TanqueDAO {
@@ -10,7 +12,7 @@ public interface TanqueDAO {
 
 	void actualizar(Tanque tanque);
 
-	Tanque consultar(Long id);
+	List<Tanque> consultar(Long id);
 
 	
 }

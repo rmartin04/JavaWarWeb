@@ -7,9 +7,9 @@
 
         <!-- Datos de conexión -->
         <property name="hibernate.connection.driver_class">oracle.jdbc.OracleDriver</property>
-        <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521/XEPDB1</property>
-        <property name="hibernate.connection.username">APPUSER</property>
-        <property name="hibernate.connection.password">admin</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:samuu/password@localhost:1522:XE</property>
+        <property name="hibernate.connection.username">samuu</property>
+        <property name="hibernate.connection.password">password</property>
 
         <!-- Dialecto de Hibernate para Oracle -->
         <property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property>
@@ -33,7 +33,7 @@
         create-only:	Crea el esquema al iniciar, pero no lo elimina al cerrar (Hibernate 5.5+). -->
 
         <!-- Clase mapeada -->
-        <mapping class="es.proyectowebjava.model.CalculadoraEntity"/>
+        <mapping class="es.proyectowebjava.model.loginEntity"/>
 
     </session-factory>
 </hibernate-configuration>

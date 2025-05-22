@@ -11,11 +11,11 @@ import es.javawarweb.web.utils.HibernateUtil;
 import excepciones.HibernateSessionException;
 
 
-public class UsuarioEntityImpl implements UsuarioDAO{
+public class UsuarioDAOImpl implements UsuarioDAO{
 	private Session session;
 	private Transaction tx;
 
-	public UsuarioEntityImpl() {
+	public UsuarioDAOImpl() {
 		session = HibernateUtil.getSession();
 	}
 	

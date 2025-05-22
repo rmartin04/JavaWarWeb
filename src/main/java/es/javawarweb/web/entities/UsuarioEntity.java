@@ -15,8 +15,8 @@ public class UsuarioEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column(name = "NOMBRE", nullable = false)
-	private String nombre;
+	@Column(name = "USUARIO", nullable = false, unique = true)
+	private String usuario;
 	
 	@Column(name = "EMAIL", nullable = false, unique = true)
 	private String email;
@@ -27,15 +27,19 @@ public class UsuarioEntity {
 	// Constructores
 	public UsuarioEntity() {}
 	
+	public UsuarioEntity(Long id) {
+		this.id = id;
+	}
+	
 	public UsuarioEntity(String email, String contrasenia) {
 		super();
 		this.email = email;
 		this.contrasenia = contrasenia;
 	}
 	
-	public UsuarioEntity(String email, String contrasenia, String nombre) {
+	public UsuarioEntity(String email, String contrasenia, String usuario) {
 		this(email, contrasenia);
-		this.nombre = nombre;
+		this.usuario = usuario;
 	}
 	
 	// Getter and setters
@@ -47,12 +51,12 @@ public class UsuarioEntity {
 		this.id = id;
 	}
 
-	public String getNombre() {
-		return nombre;
+	public String getusuario() {
+		return usuario;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setusuario(String usuario) {
+		this.usuario = usuario;
 	}
 
 	public String getEmail() {
@@ -71,4 +75,12 @@ public class UsuarioEntity {
 		this.contrasenia = contrasenia;
 	}
 	
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("usuario: ").append(usuario).append("\n");
+		sb.append("Email: ").append(email).append("\n");
+		sb.append("Contraseña: ").append(contrasenia);
+		return sb.toString();
+	}
 }

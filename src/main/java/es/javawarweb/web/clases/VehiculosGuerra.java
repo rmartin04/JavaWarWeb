@@ -7,13 +7,12 @@ import java.util.Random;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import clases.guerreros.Guerrero;
 import excepciones.AtaqueDefensaException;
 import excepciones.AtaqueMuyPoderosoException;
 import excepciones.DefensaMuyPoderosaException;
 import excepciones.EmbarcarGuerrerosException;
 import excepciones.VidaMaximaPermitidaException;
-import interfaz.Tripulable;
+import es.javawarweb.web.interfaces.Tripulable;
 
 public abstract class VehiculosGuerra implements Tripulable {
 

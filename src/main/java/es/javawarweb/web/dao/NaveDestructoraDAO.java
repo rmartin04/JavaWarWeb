@@ -11,6 +11,6 @@ public interface NaveDestructoraDAO {
 
 	void actualizar(NaveDestructora naveDestructora);
 
-	NaveDestructora consultar(Long id);
+	void consultar(Long id);
 
 }

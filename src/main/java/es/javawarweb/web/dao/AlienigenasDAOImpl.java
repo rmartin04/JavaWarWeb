@@ -1,5 +1,7 @@
 package es.javawarweb.web.dao;
 
+import java.util.List;
+
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -62,20 +64,22 @@ public class AlienigenasDAOImpl implements AlienigenasDAO {
 					"Ha habido un error al actualizar, error: " + e.getMessage());
 		}
 	}
-
 	@Override
-	public void consultar(Long id) throws HibernateSessionException {
+	public List<Alienigenas> consultar() throws HibernateSessionException {
 		try {
-            tx = session.beginTransaction();
-            Alienigenas alienigenas = session.find(Alienigenas.class, id);
-            tx.commit();
-        } catch (HibernateException e) {
-            if (tx != null)
-                tx.rollback();
-            e.printStackTrace();
-            throw new HibernateSessionException("Ha habido un error al consultar, error: " + e.getMessage());
-        }
-    }
+			tx = session.beginTransaction();
+			List<Alienigenas> alienigenas = session.createQuery("FROM Alienigenas", Alienigenas.class).list();
+			tx.commit();
+			return alienigenas; // Assuming you want the first one
+		} catch (HibernateException e) {
+			e.printStackTrace();
+			throw new HibernateSessionException(
+					"Ha habido un error al consultar los alienigenas, error: " + e.getMessage());
+		}
 	}
 
+	
+	
+
+	}
 

@@ -1,5 +1,7 @@
 package es.javawarweb.web.dao;
 
+import java.util.List;
+
 import es.javawarweb.web.entities.Humanos;
 
 public interface HumanosDAO {
@@ -10,6 +12,6 @@ public interface HumanosDAO {
 
 	void actualizar(Humanos humanos);
 
-	Humanos consultar(Long id);
+	List<Humanos> consultar(Long id);
 
 }

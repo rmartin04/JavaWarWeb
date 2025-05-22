@@ -1,4 +1,4 @@
-package es.javawarweb.web.utils;
+package es.javawarweb.utils;
 
 import java.sql.Date;
 import java.text.ParseException;
@@ -139,7 +139,7 @@ public static boolean validarEmail(String email) {
 //		error += "El email solo puede contener una @";
 //	}
 
-	if (error.isEmpty()) {
+	if (error.isBlank()) {
 		System.out.println("El email " + email + " es correcto");
 		return true;
 	} else {

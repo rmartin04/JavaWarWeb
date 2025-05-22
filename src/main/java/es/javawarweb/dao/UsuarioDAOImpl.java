@@ -40,26 +40,13 @@ public class UsuarioDAOImpl implements UsuarioDAO{
 		
 		try {
 			tx = session.beginTransaction();
-			String query = "FROM UsuarioEntity u WHERE u.usuario = :usuario";
+			String query = "FROM UsuarioEntity u WHERE u.usuario = :usuario and u.contrasenia = :contrasenia";
 			UsuarioEntity usuarioEntity = session.createQuery(query, UsuarioEntity.class)
-					.setParameter("usuario", usuario).uniqueResult();
+					.setParameter("usuario", usuario)
+					.setParameter("contrasenia", contrasenia).uniqueResult();
 			
-			// Si no lo encuentra nos devolverá null
-			if (usuarioEntity == null) {
-				tx.commit();
-				return null;
-			}
-			
-			if (usuarioEntity.getContrasenia().equals(contrasenia)) {
-				tx.commit();
-				return usuarioEntity;
-			} else {
-				// Contraseña inválida
-				tx.commit();
-				if (tx != null) tx.rollback();
-				return null;
-			}
-			
+			tx.commit();
+			return usuarioEntity;
 		} catch (HibernateException e) {
 			e.printStackTrace();
 			throw new HibernateSessionException("Ha habido un error al consultar el usuario, error: " + e.getMessage());

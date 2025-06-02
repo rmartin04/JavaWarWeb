@@ -112,7 +112,12 @@
         <artifactId>jakarta.el</artifactId>
         <version>4.0.2</version>
 	  </dependency>
-	  
+
+      <dependency>
+      	<groupId>es.cursojava.warjava</groupId>
+      	<artifactId>War_Java</artifactId>
+      	<version>0.0.1-SNAPSHOT</version>
+      </dependency>
   </dependencies>
 
   <build>

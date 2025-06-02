@@ -6,9 +6,8 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import com.warsrpingbootjava.WarSpringJava.entities.Alienigenas;
+import es.javawarweb.entities.Alienigenas;
 
-import es.javawarweb.entities.UsuarioEntity;
 import es.javawarweb.excepciones.HibernateSessionException;
 import es.javawarweb.utils.HibernateUtil;
 

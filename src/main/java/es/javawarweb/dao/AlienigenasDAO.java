@@ -2,7 +2,8 @@ package es.javawarweb.dao;
 
 import java.util.List;
 
-import es.javawarweb.entities.Alienigenas;
+import com.warsrpingbootjava.WarSpringJava.entities.Alienigenas;
+
 import es.javawarweb.excepciones.HibernateSessionException;
 
 public interface AlienigenasDAO {
